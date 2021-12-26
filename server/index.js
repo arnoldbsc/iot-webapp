@@ -39,6 +39,7 @@ wsServer.on('request', function (request) {
         }
     ]
     clients[userID].sendUTF(JSON.stringify(initialData));
+    console.log(JSON.stringify(initialData))
     console.log('connected: ' + userID + ' in ' + Object.getOwnPropertyNames(clients));
 
     connection.on('message', function(message) {

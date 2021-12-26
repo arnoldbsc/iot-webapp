@@ -20,10 +20,12 @@ const Room = () => {
     
     const handleMessage = (data) => {
         console.log(data)
-        const dataToFetch = data.map((item, index) => {
-            return <Switch key={index} onClick={handleClick} index={index} device={item.device} name={item.name} state={item.value}/>
-        })
-        setFetchData(dataToFetch)
+        if(data !== null){
+            const dataToFetch = data.map((item, index) => {
+                return <Switch key={index} onClick={handleClick} index={index} device={item.device} name={item.name} state={item.value}/>
+            })
+            setFetchData(dataToFetch)
+        }
     }
     
     const handleClose = () => {

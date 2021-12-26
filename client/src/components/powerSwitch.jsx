@@ -23,7 +23,7 @@ const changeButton = (state) => {
 }
 
 const Switch = (props) => {
-    const [state, setState] = useState(props.state)
+    const [state, setState] = useState(!props.state)
     const isClick = () => {
         setState(!state)
         const data = {
